@@ -128,8 +128,8 @@ function checkThreatAndChance()
   o1, x1, o2, x2 = checkDiag()
   if x1==2 or o1==2 then
     for i=1, 3 do
-      if matrix[i][j].sym == '.' then
-        matrix[i][j].sym = 'O'
+      if matrix[i][i].sym == '.' then
+        matrix[i][i].sym = 'O'
         return true
       end
     end
@@ -198,6 +198,7 @@ function love.update()
     else finalMessage = "You loose!"
     end
   elseif matrixIsFull() then
+    gameEnded = true
     finalMessage = "Draw!"
   else
     if userPlayed then
