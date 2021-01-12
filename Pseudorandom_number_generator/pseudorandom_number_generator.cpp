@@ -2,10 +2,10 @@
 
 using namespace std;
 
-struct pseudorandom_generator {
+struct pseudorandom_number_generator {
   public:
-    pseudorandom_generator() {}
-    pseudorandom_generator(vector<long long>& keys): _keys(keys) {}
+    pseudorandom_number_generator() {}
+    pseudorandom_number_generator(vector<long long>& keys): _keys(keys) {}
     long long get_random_number() {
       construct_matrices();
       int times = 20;
